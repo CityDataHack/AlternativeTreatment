@@ -8,6 +8,8 @@ CityDataHack March 2018
 ## Deploying
 Make sure you have [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed and you are logged in.
 
+### Link the Heroku repo
+
 Add Heroku remote url:
 
 ```
@@ -18,8 +20,9 @@ heroku git:remote -a spirit-of-the-place
 sh heroku-remote.sh
 ```
 
+### Deploy
 
-Push ``/app`` subdirectory to Heroku:
+Pushing ``/app`` subdirectory to Heroku:
 
 ```
 git subtree push --prefix app/ heroku master
@@ -28,6 +31,8 @@ git subtree push --prefix app/ heroku master
 
 sh deploy.sh
 ```
+
+### Force deploy (if needed)
 
 If you get an error about the tip of the branch being out of sync:
 
