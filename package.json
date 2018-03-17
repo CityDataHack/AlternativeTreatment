@@ -10,6 +10,7 @@
   "bugs": {
     "url": "https://github.com/CityDataHack/AlternativeTreatment/issues"
   },
+  "main": "app/index.js",
   "devDependencies": {},
   "dependencies": {
     "express": "^4.16.3",

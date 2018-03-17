@@ -7,7 +7,7 @@ const app = express()
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',
   extname: '.hbs',
-  layoutsDir: path.join(__dirname, 'views/layouts')
+  layoutsDir: path.join(__dirname, 'views/templates')
 }))
 
 app.set('view engine', '.hbs')
@@ -20,3 +20,5 @@ app.get('/', (request, response) => {
     name: 'City Data Hack 2018'
   })
 })
+
+app.listen(8080);
