@@ -1,14 +1,13 @@
-/* global variables */
 :root {
   /* fonts */
   --base-font: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Calibri, sans-serif;
-  --fw-light: 300
-  --fw-normal: 400
-  --fw-bold: 600
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
 
   /* colors */
-  --bg: #dddddd;
-  --text-color: #333333;
+  --bg: #f1f1f1;
+  --text-color: #444;
 }
 
 
