@@ -28,7 +28,7 @@ app.get('/', (request, response) => {
   })
 })
 
-// custom-bot
+// iframe
 app.get('/iframe', (request, response) => {
   response.render('iframe', {
     name: 'Iframe backup'

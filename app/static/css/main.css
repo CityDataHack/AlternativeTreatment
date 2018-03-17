@@ -43,7 +43,7 @@ body {
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: var(--spacing) 0;
+  padding: 12rem 0;
 }
 
 /* chatbot */
