@@ -21,9 +21,17 @@ app.use(express.static('static'))
 
 
 // route handler
+// index
 app.get('/', (request, response) => {
   response.render('home', {
     name: 'City Data Hack 2018'
+  })
+})
+
+// custom-bot
+app.get('/custom-bot', (request, response) => {
+  response.render('custom-bot', {
+    name: 'Custom Bot'
   })
 })
 
