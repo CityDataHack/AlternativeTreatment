@@ -1,4 +1,4 @@
-# AlternativeTreatment
+# Alternative Treatment
 CityDataHack March 2018
 
 
