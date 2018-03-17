@@ -16,6 +16,8 @@ app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'views'))
 app.set('port', process.env.PORT || 8080);
 
+app.use(express.static('static'))
+
 
 // route handler
 app.get('/', (request, response) => {
