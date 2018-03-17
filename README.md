@@ -18,9 +18,14 @@ heroku git:remote -a spirit-of-the-place
 Push ``/app`` subdirectory to Heroku:
 
 ```
-git subtree push --prefix app/ master
+git subtree push --prefix app/ heroku master
 ```
 
+If you get an error about the tip of the branch being out of sync:
+
+```
+git push heroku `git subtree split --prefix app/ master`:master --force
+```
 
 
 ## Team members
