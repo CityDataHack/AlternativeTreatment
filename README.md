@@ -7,4 +7,5 @@ CityDataHack March 2018
 - Jonathan Cohen
 - Ilja Panic
 - Ivan Pecorari
+- Emanuil Tolev
 - Maciek Ziarkowski
