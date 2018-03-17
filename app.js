@@ -1,6 +1,8 @@
 const path = require('path')
 const express = require('express')
 const exphbs = require('express-handlebars')
+require('dotenv').config({ path: 'variables.env' });
+
 
 const app = express()
 
@@ -12,6 +14,7 @@ app.engine('.hbs', exphbs({
 
 app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'views'))
+app.set('port', process.env.PORT || 8080);
 
 
 // route handler
@@ -21,4 +24,4 @@ app.get('/', (request, response) => {
   })
 })
 
-app.listen(8080);
+app.listen(app.get('port'))
