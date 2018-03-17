@@ -11,25 +11,37 @@
 
   /* sizing */
   --container-width: 580px;
+  --spacing: 2.4rem;
 }
 
 
 /* base element styles */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+}
+
 html {
-  font-size: 62.5%; /* 10px = 1rem! */
+  font-size: 62.5%; /* 10px = 1rem */
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text-color);
   font-family: var(--base-font);
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 
 /* layout */
 .container {
   max-width: var(--container-width);
-  border: 1px dashed gray;
   margin: 0 auto;
+  padding: var(--spacing) 0;
 }
