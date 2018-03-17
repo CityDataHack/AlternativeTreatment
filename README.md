@@ -9,8 +9,8 @@ CityDataHack March 2018
 
 ## Team members
 
-- Jonathan Cohen
-- Ilja Panic
-- Ivan Pecorari
-- Emanuil Tolev
-- Maciek Ziarkowski
+- Jonathan Cohen ()
+- Ilja Panic (iljapanic@gmail.com)
+- Ivan Pecorari ()
+- Emanuil Tolev ()
+- Maciek Ziarkowski ()
