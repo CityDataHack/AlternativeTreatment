@@ -8,6 +8,9 @@
   /* colors */
   --bg: #f1f1f1;
   --text-color: #444;
+
+  /* sizing */
+  --container-width: 580px;
 }
 
 
@@ -16,4 +19,12 @@ body {
   background-color: var(--bg);
   color: var(--text-color);
   font-family: var(--base-font);
+}
+
+
+/* layout */
+.container {
+  max-width: var(--container-width);
+  border: 1px dashed gray;
+  margin: 0 auto;
 }

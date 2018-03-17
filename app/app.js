@@ -1,9 +1,10 @@
-const path = require('path')
-const express = require('express')
+const apiai = require('apiai')
 const exphbs = require('express-handlebars')
+const express = require('express')
+const path = require('path')
 require('dotenv').config({ path: 'variables.env' });
 
-
+// Express server
 const app = express()
 
 app.engine('.hbs', exphbs({
@@ -27,3 +28,21 @@ app.get('/', (request, response) => {
 })
 
 app.listen(app.get('port'))
+
+
+// Dialogflow bot
+const bot = apiai(process.env.DIALOGFLOW_KEY);
+
+const botRequest = bot.textRequest('Where should I go?', {
+  sessionId: 'dev-session'
+});
+
+botRequest.on('response', function(response) {
+  console.log(response);
+});
+
+botRequest.on('error', function(error) {
+  console.log(error);
+});
+
+botRequest.end();
