@@ -9,10 +9,17 @@ CityDataHack March 2018
 Make sure you have [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed and you are logged in.
 
 Add Heroku remote url:
-``heroku git:remote -a spirit-of-the-place``
+
+```
+heroku git:remote -a spirit-of-the-place
+```
+
 
 Push ``/app`` subdirectory to Heroku:
-``git subtree push --prefix app/ master``
+
+```
+git subtree push --prefix app/ master
+```
 
 
 
