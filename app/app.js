@@ -33,28 +33,28 @@ io.on('connection', socketHandler.onConnection)
 // index
 app.get('/', (request, response) => {
   response.render('home', {
-    name: 'City Data Hack 2018'
+    title: 'Spirit of the Place'
   })
 })
 
 // bot
 app.get('/bot', (request, response) => {
   response.render('bot', {
-    name: 'City Data Hack 2018'
+    title: 'Bot - Spirit of the Place'
   })
 })
 
 // board
 app.get('/board', (request, response) => {
   response.render('board', {
-    name: 'City Data Hack 2018'
+    title: 'Board - Spirit of the Place'
   })
 })
 
-// iframe
-app.get('/iframe', (request, response) => {
-  response.render('iframe', {
-    name: 'Iframe backup'
+// demo
+app.get('/demo', (request, response) => {
+  response.render('demo', {
+    title: 'Demo - Spirit of the Place'
   })
 })
 
