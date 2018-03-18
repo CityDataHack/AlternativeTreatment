@@ -4,8 +4,14 @@ const express = require('express')
 const path = require('path')
 require('dotenv').config({ path: 'variables.env' });
 
+const apiRouter = require('./apiRouter.js')
+const socketHandler = require('./socketHandler.js')
+
 // Express server
 const app = express()
+
+const http = require('http').Server(app)
+const io = require('socket.io')(http)
 
 app.engine('.hbs', exphbs({
   defaultLayout: 'default',
@@ -19,6 +25,9 @@ app.set('port', process.env.PORT || 8080);
 
 app.use(express.static('static'))
 
+app.use('/api', apiRouter)
+
+io.on('connection', socketHandler.onConnection)
 
 // route handler
 // index
@@ -36,21 +45,3 @@ app.get('/iframe', (request, response) => {
 })
 
 app.listen(app.get('port'))
-
-
-// Dialogflow bot
-const bot = apiai(process.env.DIALOGFLOW_KEY);
-
-const botRequest = bot.textRequest('Where should I go?', {
-  sessionId: 'dev-session'
-});
-
-botRequest.on('response', function(response) {
-  console.log(response);
-});
-
-botRequest.on('error', function(error) {
-  console.log(error);
-});
-
-botRequest.end();
