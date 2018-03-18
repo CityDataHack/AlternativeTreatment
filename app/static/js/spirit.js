@@ -1,12 +1,13 @@
 var botui = new BotUI('hello-world');
-var socket = io.connect('http://localhost:3000');
+var socket = io();
 
 var getUserInput = function() {
 
+  // user input
   return botui.action.text({
     delay: 500,
     action: {
-      placeholder: 'Hi Spirit, what events are there in the area today?'
+      placeholder: 'Hi Spirit'
     }
   }).then( function(inp) {
     socket.emit('message', inp)
@@ -21,7 +22,7 @@ socket.on('reply', function(res){
   if (action === isEvent) {
     console.log('throw up events')
   }
-
+  // bots response
   botui.message.bot({
     delay: 1000,
     content: res.result.fulfillment.speech
