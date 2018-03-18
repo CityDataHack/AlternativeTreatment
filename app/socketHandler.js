@@ -13,7 +13,7 @@ exports.onConnection = function(socket){
     })
 
     socket.on('message', function(message){
-        var botRequest = bot.textRequest(message, {
+        var botRequest = bot.textRequest(message.value, {
             sessionId: `dev-session-${socket.id}`
         })
 
