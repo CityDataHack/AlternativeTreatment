@@ -10,6 +10,7 @@
   --text-color: #444;
   --gray-light: #f9f9f9;
   --gray: #e9e9e9;
+  --brand: #37bbe4;
 
   /* sizing */
   --container-width: 580px;
@@ -40,6 +41,10 @@ body {
   font-size: 1rem;
 }
 
+a {
+  color: var(--brand);
+}
+
 
 /* layout */
 .container {
@@ -51,18 +56,51 @@ body {
   justify-content: center;
 }
 
-/* notice */
-.notice {
-  align-self: flex-end;
-  justify-self: flex-end;
-  font-size: 0.9rem;
-}
-
 
 /* bot */
 .bot {
   margin: 0 auto;
   max-width: var(--container-width);
+  margin-top: 12rem;
+}
+
+/* welcome screen */
+.welcome {
+  background-color: var(--gray-light);
+  width: 100%;
+  min-height: 99vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+}
+
+.welcome .bot {
+  margin-top: 0;
+  width: 50%;
+}
+
+.welcome .notice {
+  padding-right: 2rem;
+  width: 50%;
+}
+
+.notice h1 {
+  margin-bottom: 1.2rem;
+}
+
+.notice p {
+  font-size: 1.2rem;
+  max-width: 640px;
+  line-height: 1.85;
+}
+
+.notice .links {
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.notice .links li {
+  margin-top: 1rem;
 }
 
 /* board */
@@ -93,4 +131,27 @@ body {
   border: none;
   width: 100%;
   height: 99vh;
+}
+
+/* media querries */
+@media only screen and (max-width: 600px) {
+  .bot {
+    margin-top: 2rem;
+  }
+  .welcome {
+    display: flex;
+    padding: 5vh 1rem 0 1rem;
+    flex-wrap: wrap;
+
+  }
+
+  .welcome .bot {
+    width: 100%;
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .welcome .notice {
+    width: 100%;
+  }
 }
