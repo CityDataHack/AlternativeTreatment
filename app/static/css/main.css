@@ -39,11 +39,24 @@ body {
 }
 
 
-/* layout */
+/* custom */
 .container {
-  max-width: var(--container-width);
-  margin: 0 auto;
+  min-height: 100vh;
   padding: 12rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color: #f9f9f9; */
 }
 
-/* chatbot */
+.bot {
+  margin: 0 auto;
+  max-width: var(--container-width);
+}
+
+.notice {
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: 0.9rem;
+}
+

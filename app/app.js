@@ -37,6 +37,20 @@ app.get('/', (request, response) => {
   })
 })
 
+// bot
+app.get('/bot', (request, response) => {
+  response.render('bot', {
+    name: 'City Data Hack 2018'
+  })
+})
+
+// board
+app.get('/board', (request, response) => {
+  response.render('board', {
+    name: 'City Data Hack 2018'
+  })
+})
+
 // iframe
 app.get('/iframe', (request, response) => {
   response.render('iframe', {
