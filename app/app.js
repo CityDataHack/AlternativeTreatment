@@ -2,6 +2,7 @@ const apiai = require('apiai')
 const exphbs = require('express-handlebars')
 const express = require('express')
 const path = require('path')
+const bodyParser = require('body-parser')
 require('dotenv').config({ path: 'variables.env' });
 
 const apiRouter = require('./apiRouter.js')
@@ -13,6 +14,7 @@ const app = express()
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
+
 app.engine('.hbs', exphbs({
   defaultLayout: 'default',
   extname: '.hbs',
@@ -23,6 +25,8 @@ app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'views'))
 app.set('port', process.env.PORT || 8080);
 
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(express.static('static'))
 
 app.use('/api', apiRouter)
