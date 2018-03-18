@@ -8,7 +8,7 @@ require('dotenv').config({ path: 'variables.env' });
 const app = express()
 
 app.engine('.hbs', exphbs({
-  defaultLayout: 'main',
+  defaultLayout: 'default',
   extname: '.hbs',
   layoutsDir: path.join(__dirname, 'views/templates')
 }))
@@ -28,10 +28,10 @@ app.get('/', (request, response) => {
   })
 })
 
-// custom-bot
-app.get('/custom-bot', (request, response) => {
-  response.render('custom-bot', {
-    name: 'Custom Bot'
+// iframe
+app.get('/iframe', (request, response) => {
+  response.render('iframe', {
+    name: 'Iframe backup'
   })
 })
 
