@@ -1,5 +1,5 @@
 const express = require('express')
-
+const bodyParser = require('body-parser')
 var router = express.Router()
 
 
@@ -27,7 +27,7 @@ var events = [
     {name: "Choir concert", time: parseISOStringDateTime("2018-03-19T19:00"), address: "St. Mark's Church Barking & Dagenham"},
     {name: "Farmer's market", time: parseISOStringDateTime("2018-03-20T12:00"), address: "Square in front of Town Hall"},
     {name: "Farmer's market - second day", time: parseISOStringDateTime("2018-03-21T12:00"), address: "Square in front of Town Hall"}
-    
+
 ]
 
 var board = [

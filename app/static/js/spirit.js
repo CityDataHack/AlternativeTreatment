@@ -16,12 +16,19 @@ var getUserInput = function() {
 
 socket.on('reply', function(res){
 
-  var action = res.result.action
-  var isEvent = "search-event"
-
-  console.log(res.result.fulfillment.data)
-
   // bots response
+  console.log(res)
+
+
+  var intent = res.result.metadata.intentName
+  var meeting = 'Set up a meeting'
+  var addon = document.getElementById('addon')
+
+
+  if(intent == meeting) {
+    addon.classList.remove('hidden')
+  }
+
   botui.message.bot({
     delay: 1000,
     content: res.result.fulfillment.speech

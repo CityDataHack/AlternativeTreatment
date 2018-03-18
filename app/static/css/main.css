@@ -9,6 +9,7 @@
   --bg: #fff;
   --text-color: #444;
   --gray-light: #f9f9f9;
+  --gray-dark: #606060;
   --gray: #e9e9e9;
   --brand: #37bbe4;
 
@@ -45,6 +46,12 @@ a {
   color: var(--brand);
 }
 
+hr {
+  border-top: 1px solid var(--gray);
+  display: block;
+  height: 0;
+  padding: 0;
+}
 
 /* layout */
 .container {
@@ -120,17 +127,60 @@ a {
   width: 35%;
   height: 100vh;
   border-right: 1px solid var(--gray);
+  padding-top: 4rem;
+}
+
+.demo__bot .bot {
+  margin-top: 0;
 }
 
 .demo__board {
   width: 65%;
   height: 100vh;
+  padding: 0 2rem;
+  padding-top: 4rem;
 }
+
+.demo__board h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--gray-dark);
+}
+
+.schedule {
+  list-style-type: none;
+}
+
+.schedule li {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.schedule li span {
+  font-weight: var(--fw-bold);
+}
+
 
 .demo iframe {
   border: none;
   width: 100%;
   height: 99vh;
+}
+
+.addon.hidden {
+  height: 0;
+  display: none;
+}
+
+.addon {
+  background-color: rgba(255,235,0, 0.35);
+  padding: 0.5rem 0;
+  display: flex;
+}
+
+.addon .notification {
+  margin-left: 4rem;
+  font-size: 0.75rem;
 }
 
 /* media querries */
